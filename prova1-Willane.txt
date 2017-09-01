@@ -1,0 +1,107 @@
+Primeira avaliação - Programação avançada
+Willane Paiva de Souza - 2015011953
+
+==== questao 1 ======================================
+
+Considerando os digitos inteiros como números correspondentes
+na tabela ASCII, utilizou-se essa correspondência entre ambos
+para armazenar o valor do caractere em char em outro vetor char,
+alterando apenas a posição no vetor ao executar o loop.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void transmitArray(unsigned char dados[32]){
+    unsigned char v1[32];
+    char c=0;
+    int i;
+    for(i=0;i<32;i++){
+        v1[i] = dados[i] + c;
+        printf("%d\n", v1[i]);
+    }
+
+}
+void transmitByte(unsigned char byte){
+    printf("transmitiu byte %d", byte);
+}
+int main(void){
+    unsigned char dados[32];
+    int i;
+    for(i=0; i<32; i++){
+        dados[i] = rand()%2;
+    }
+    transmitArray(dados);
+
+    return 0;
+}
+
+
+==== questao 2 ======================================
+
+#include <iostream>
+using namespace std;
+class Color{
+    float r,g,b; // cores no intervalo 0-255
+public:
+    // construtor da classe
+    // guarda o estado inicial do objeto
+    Color(float _r=0, float _g=0, float _b=0){
+        r = _r;
+        g = _g;
+        b= _b;
+    }
+
+    // retorna um novo individuo de cor igual aa media
+    // da sua cor com a cor passada como parametro
+    Color operator+(Color c){
+        Color c1;
+        c1.r=(r+ c.r)/2;
+        c1.g=(g + c.g)/2;
+        c1.b=(b + c.b)/2;
+        return c1;
+    }
+
+    // se for fornecido um dos pais do individuo
+    // a funcao separa a cor do outro parental
+    Color operator-(Color c){
+        Color c2;
+        c2.r = r - c.r; //cada objeto irá receber o valor da diferença entre o parâmetro ( c) e o objeto 
+        c2.g = g - c.g ;
+        c2.b = b - c.b;
+        return c2;
+    }
+
+    // retorna ‘‘1’’ se o individuo c possui cor igual
+    // ao proprio objeto, e ‘‘0’’, caso contrario
+    int operator==(Color c){
+        if((r==c.r)&& (g==c.g)&& (b==c.b))
+            return 1;
+        else
+            return 0;
+    }
+
+    // Mostra os valores de vermelho, verde e azul da cor.
+    void print(){
+        cout<<r<<" " <<g<<" "<<b<<endl;
+    }
+};
+
+
+
+
+#include <color.cpp>
+
+using namespace std;
+
+int main(void){
+    Color a(255,0,0), b(0,120, 121), c, d;
+    c = a.operator +(b); //a+b
+    d = c.operator -(a); //c - a
+    d.print();
+    if(d == b){
+        cout << "Fail! DNA positivo: b eh pai de c!\n";
+    }
+    else{
+        cout << "Ufa! que alivio!\n";
+    }
+}
