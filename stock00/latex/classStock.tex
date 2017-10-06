@@ -1,0 +1,54 @@
+\hypertarget{classStock}{}\section{Stock Class Reference}
+\label{classStock}\index{Stock@{Stock}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStock_adddc4282213b3174a4299cca5a30117c}\label{classStock_adddc4282213b3174a4299cca5a30117c}} 
+\hyperlink{classStock_adddc4282213b3174a4299cca5a30117c}{Stock} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStock_accda2349e8588b08252571d73a053c78}\label{classStock_accda2349e8588b08252571d73a053c78}} 
+\hyperlink{classStock_accda2349e8588b08252571d73a053c78}{Stock} (const std\+::string \&co, long n=0, double pr=0.\+0)
+\begin{DoxyCompactList}\small\item\em constructor created by the programmer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStock_a5ec702d0afca0a14a051c60e323f5963}\label{classStock_a5ec702d0afca0a14a051c60e323f5963}} 
+void {\bfseries acquire} (const std\+::string \&co, long n, double pr)
+\item 
+\mbox{\Hypertarget{classStock_acb2c8dffd2ccdcd5b4e9aba72006a188}\label{classStock_acb2c8dffd2ccdcd5b4e9aba72006a188}} 
+void \hyperlink{classStock_acb2c8dffd2ccdcd5b4e9aba72006a188}{buy} (long num, double price)
+\begin{DoxyCompactList}\small\item\em Method used when its buyed a new share. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStock_ab19d8cd54ca77e4a5656a54da66df827}\label{classStock_ab19d8cd54ca77e4a5656a54da66df827}} 
+void \hyperlink{classStock_ab19d8cd54ca77e4a5656a54da66df827}{sell} (long num, double price)
+\begin{DoxyCompactList}\small\item\em recalculte the shares after selling some of it \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStock_a3e7ceda99d3fc2279b1ce74957671746}\label{classStock_a3e7ceda99d3fc2279b1ce74957671746}} 
+void \hyperlink{classStock_a3e7ceda99d3fc2279b1ce74957671746}{update} (double price)
+\begin{DoxyCompactList}\small\item\em updates the new price of the shares \end{DoxyCompactList}\item 
+void \hyperlink{classStock_afa604579a5754070f666468e9ba950c4}{show} ()
+\begin{DoxyCompactList}\small\item\em Show to the user the info storaged. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStock_a29cb9e4fc7c907ef975d7ea90ef55e24}\label{classStock_a29cb9e4fc7c907ef975d7ea90ef55e24}} 
+\hyperlink{classStock_a29cb9e4fc7c907ef975d7ea90ef55e24}{$\sim$\+Stock} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStock_a060ea42aebd5ade3b822eeb5abe8e5a0}\label{classStock_a060ea42aebd5ade3b822eeb5abe8e5a0}} 
+const \hyperlink{classStock}{Stock} \& \hyperlink{classStock_a060ea42aebd5ade3b822eeb5abe8e5a0}{topval} (const \hyperlink{classStock}{Stock} \&s) const
+\begin{DoxyCompactList}\small\item\em compare 2 objetos e return the biggest one \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classStock_afa604579a5754070f666468e9ba950c4}\label{classStock_afa604579a5754070f666468e9ba950c4}} 
+\index{Stock@{Stock}!show@{show}}
+\index{show@{show}!Stock@{Stock}}
+\subsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Stock\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Show to the user the info storaged. 
+
+set format to \#.\#\#\#
+
+set format to \#.\#\#
+
+restore original format 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+stock00.\+h\item 
+stock00.\+cpp\end{DoxyCompactItemize}
